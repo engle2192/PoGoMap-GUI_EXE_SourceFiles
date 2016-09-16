@@ -172,6 +172,19 @@ namespace PokemonGo_Map_Launcher
         {
             System.Diagnostics.Process.Start("http://" + GetLocalIPAddress() + ":" + textBox4.Text);
         }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Update PoGoMap-GUI?", "Update?", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                System.Diagnostics.Process.Start("PoGoMap-GUI_updater.exe");
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                
+            }
+            
+        }
 
         #endregion
 
@@ -274,5 +287,7 @@ namespace PokemonGo_Map_Launcher
         {
             System.Diagnostics.Process.Start("https://github.com/engle2192/PoGoMap-GUI/issues");
         }
+
+
     }
 }

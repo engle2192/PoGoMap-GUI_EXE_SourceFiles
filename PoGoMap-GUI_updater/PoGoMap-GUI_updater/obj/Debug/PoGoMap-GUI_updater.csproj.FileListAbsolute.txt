@@ -1,0 +1,9 @@
+C:\Users\Chris\Documents\GitHub\PoGoMap-GUI_EXE_SourceFiles\PoGoMap-GUI_updater\PoGoMap-GUI_updater\bin\Debug\PoGoMap-GUI_updater.exe.config
+C:\Users\Chris\Documents\GitHub\PoGoMap-GUI_EXE_SourceFiles\PoGoMap-GUI_updater\PoGoMap-GUI_updater\bin\Debug\PoGoMap-GUI_updater.exe
+C:\Users\Chris\Documents\GitHub\PoGoMap-GUI_EXE_SourceFiles\PoGoMap-GUI_updater\PoGoMap-GUI_updater\bin\Debug\PoGoMap-GUI_updater.pdb
+C:\Users\Chris\Documents\GitHub\PoGoMap-GUI_EXE_SourceFiles\PoGoMap-GUI_updater\PoGoMap-GUI_updater\obj\Debug\PoGoMap-GUI_updater.csprojResolveAssemblyReference.cache
+C:\Users\Chris\Documents\GitHub\PoGoMap-GUI_EXE_SourceFiles\PoGoMap-GUI_updater\PoGoMap-GUI_updater\obj\Debug\PoGoMap_GUI_updater.Form1.resources
+C:\Users\Chris\Documents\GitHub\PoGoMap-GUI_EXE_SourceFiles\PoGoMap-GUI_updater\PoGoMap-GUI_updater\obj\Debug\PoGoMap_GUI_updater.Properties.Resources.resources
+C:\Users\Chris\Documents\GitHub\PoGoMap-GUI_EXE_SourceFiles\PoGoMap-GUI_updater\PoGoMap-GUI_updater\obj\Debug\PoGoMap-GUI_updater.csproj.GenerateResource.Cache
+C:\Users\Chris\Documents\GitHub\PoGoMap-GUI_EXE_SourceFiles\PoGoMap-GUI_updater\PoGoMap-GUI_updater\obj\Debug\PoGoMap-GUI_updater.exe
+C:\Users\Chris\Documents\GitHub\PoGoMap-GUI_EXE_SourceFiles\PoGoMap-GUI_updater\PoGoMap-GUI_updater\obj\Debug\PoGoMap-GUI_updater.pdb

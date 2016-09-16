@@ -70,6 +70,7 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button3 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -401,7 +402,7 @@
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(104, 516);
+            this.button7.Location = new System.Drawing.Point(198, 516);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(89, 89);
             this.button7.TabIndex = 33;
@@ -570,7 +571,7 @@
             this.linkLabel1.Size = new System.Drawing.Size(80, 13);
             this.linkLabel1.TabIndex = 44;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "PoGo-GUI v3.0";
+            this.linkLabel1.Text = "PoGo-GUI v3.1";
             this.toolTip1.SetToolTip(this.linkLabel1, "Click to check latest releases");
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
@@ -588,6 +589,21 @@
             this.toolTip1.SetToolTip(this.linkLabel2, "Click to submit a bug");
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(104, 516);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(89, 89);
+            this.button3.TabIndex = 46;
+            this.button3.Text = "Check For Updates";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -595,6 +611,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1261, 639);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label13);
@@ -689,6 +706,7 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button button3;
     }
 }
 
