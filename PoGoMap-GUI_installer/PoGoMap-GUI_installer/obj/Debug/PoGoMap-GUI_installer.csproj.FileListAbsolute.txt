@@ -1,0 +1,9 @@
+C:\Users\Chris\Documents\GitHub\PoGoMap-GUI_EXE_SourceFiles\PoGoMap-GUI_installer\PoGoMap-GUI_installer\bin\Debug\PoGoMap-GUI_installer.exe.config
+C:\Users\Chris\Documents\GitHub\PoGoMap-GUI_EXE_SourceFiles\PoGoMap-GUI_installer\PoGoMap-GUI_installer\bin\Debug\PoGoMap-GUI_installer.exe
+C:\Users\Chris\Documents\GitHub\PoGoMap-GUI_EXE_SourceFiles\PoGoMap-GUI_installer\PoGoMap-GUI_installer\bin\Debug\PoGoMap-GUI_installer.pdb
+C:\Users\Chris\Documents\GitHub\PoGoMap-GUI_EXE_SourceFiles\PoGoMap-GUI_installer\PoGoMap-GUI_installer\obj\Debug\PoGoMap-GUI_installer.csprojResolveAssemblyReference.cache
+C:\Users\Chris\Documents\GitHub\PoGoMap-GUI_EXE_SourceFiles\PoGoMap-GUI_installer\PoGoMap-GUI_installer\obj\Debug\PoGoMap_GUI_installer.Form1.resources
+C:\Users\Chris\Documents\GitHub\PoGoMap-GUI_EXE_SourceFiles\PoGoMap-GUI_installer\PoGoMap-GUI_installer\obj\Debug\PoGoMap_GUI_installer.Properties.Resources.resources
+C:\Users\Chris\Documents\GitHub\PoGoMap-GUI_EXE_SourceFiles\PoGoMap-GUI_installer\PoGoMap-GUI_installer\obj\Debug\PoGoMap-GUI_installer.csproj.GenerateResource.Cache
+C:\Users\Chris\Documents\GitHub\PoGoMap-GUI_EXE_SourceFiles\PoGoMap-GUI_installer\PoGoMap-GUI_installer\obj\Debug\PoGoMap-GUI_installer.exe
+C:\Users\Chris\Documents\GitHub\PoGoMap-GUI_EXE_SourceFiles\PoGoMap-GUI_installer\PoGoMap-GUI_installer\obj\Debug\PoGoMap-GUI_installer.pdb
