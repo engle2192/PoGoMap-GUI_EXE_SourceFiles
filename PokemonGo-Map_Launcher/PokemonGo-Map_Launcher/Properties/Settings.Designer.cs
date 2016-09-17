@@ -2002,5 +2002,65 @@ namespace PokemonGo_Map_Launcher.Properties {
                 this["consumer_secret"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("\"YOUR_API_KEY\"")]
+        public string account_sid {
+            get {
+                return ((string)(this["account_sid"]));
+            }
+            set {
+                this["account_sid"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("\"YOUR_AUTH_TOKEN\"")]
+        public string auth_token {
+            get {
+                return ((string)(this["auth_token"]));
+            }
+            set {
+                this["auth_token"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("\"YOUR_FROM_NUM\"")]
+        public string from_number {
+            get {
+                return ((string)(this["from_number"]));
+            }
+            set {
+                this["from_number"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("\"YOUR_TO_NUM\"")]
+        public string to_number {
+            get {
+                return ((string)(this["to_number"]));
+            }
+            set {
+                this["to_number"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool enableTwilio {
+            get {
+                return ((bool)(this["enableTwilio"]));
+            }
+            set {
+                this["enableTwilio"] = value;
+            }
+        }
     }
 }

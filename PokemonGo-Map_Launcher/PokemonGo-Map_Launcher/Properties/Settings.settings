@@ -497,5 +497,20 @@
     <Setting Name="consumer_secret" Type="System.String" Scope="User">
       <Value Profile="(Default)">"YOUR_CONSUMER_SECRET"</Value>
     </Setting>
+    <Setting Name="account_sid" Type="System.String" Scope="User">
+      <Value Profile="(Default)">"YOUR_API_KEY"</Value>
+    </Setting>
+    <Setting Name="auth_token" Type="System.String" Scope="User">
+      <Value Profile="(Default)">"YOUR_AUTH_TOKEN"</Value>
+    </Setting>
+    <Setting Name="from_number" Type="System.String" Scope="User">
+      <Value Profile="(Default)">"YOUR_FROM_NUM"</Value>
+    </Setting>
+    <Setting Name="to_number" Type="System.String" Scope="User">
+      <Value Profile="(Default)">"YOUR_TO_NUM"</Value>
+    </Setting>
+    <Setting Name="enableTwilio" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

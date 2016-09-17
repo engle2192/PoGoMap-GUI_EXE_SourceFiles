@@ -25,7 +25,7 @@ namespace PokemonGo_Map_Launcher
             InitializeComponent();
         }
         public string DPath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-        public string currentVersion = "3.1.2";
+        public string currentVersion = "3.1.3";
 
         public static bool CheckForInternetConnection()
         {
@@ -340,6 +340,10 @@ namespace PokemonGo_Map_Launcher
             System.Diagnostics.Process.Start("https://github.com/engle2192/PoGoMap-GUI/issues");
         }
 
-
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form4 f4 = new Form4();
+            f4.ShowDialog();
+        }
     }
 }

@@ -2041,6 +2041,26 @@ namespace PokemonGo_Map_Launcher
                 File.WriteAllLines(@".\PokeAlarm\alarms.json", lines);
             }
 
+            if (enableTwilo.Checked)
+            {
+                var lines = File.ReadAllLines(@".\PokeAlarm\alarms.json");
+                lines[30] = @"			""active"": ""True"",";
+                lines[32] = @"			""account_sid"": " + account_sid.Text + ",";
+                lines[33] = @"			""auth_token"": " + auth_token.Text + ",";
+                lines[34] = @"			""from_number"": " + from_number.Text + ",";
+                lines[35] = @"			""to_number"": " + to_number.Text + "";
+                File.WriteAllLines(@".\PokeAlarm\alarms.json", lines);
+            }
+            else
+            {
+                var lines = File.ReadAllLines(@".\PokeAlarm\alarms.json");
+                lines[30] = @"			""active"": ""False"",";
+                lines[32] = @"			""account_sid"":" + account_sid.Text + ",";
+                lines[33] = @"			""auth_token"":" + auth_token.Text + ",";
+                lines[34] = @"			""from_number"":" + from_number.Text + ",";
+                lines[35] = @"			""to_number"":" + to_number.Text + "";
+                File.WriteAllLines(@".\PokeAlarm\alarms.json", lines);
+            }
 
 
 
@@ -2207,6 +2227,11 @@ namespace PokemonGo_Map_Launcher
             Properties.Settings.Default.access_secret = access_secret.Text;
             Properties.Settings.Default.consumer_key = consumer_key.Text;
             Properties.Settings.Default.consumer_secret = consumer_secret.Text;
+            Properties.Settings.Default.account_sid = account_sid.Text;
+            Properties.Settings.Default.auth_token = auth_token.Text;
+            Properties.Settings.Default.from_number = from_number.Text;
+            Properties.Settings.Default.to_number = to_number.Text;
+            Properties.Settings.Default.enableTwilio = enableTwilo.Checked;
             Properties.Settings.Default.Save();
         }
 
