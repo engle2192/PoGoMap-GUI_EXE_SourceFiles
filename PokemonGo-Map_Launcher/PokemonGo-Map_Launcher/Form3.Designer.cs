@@ -68,6 +68,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -211,9 +212,9 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.label6);
             this.groupBox6.Controls.Add(this.groupBox9);
             this.groupBox6.Controls.Add(this.groupBox8);
-            this.groupBox6.Controls.Add(this.DLAccountCreator);
             this.groupBox6.Location = new System.Drawing.Point(3, 248);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(326, 239);
@@ -225,7 +226,7 @@
             // 
             this.groupBox9.Controls.Add(this.progressBar5);
             this.groupBox9.Controls.Add(this.DownloadPJS);
-            this.groupBox9.Location = new System.Drawing.Point(6, 152);
+            this.groupBox9.Location = new System.Drawing.Point(6, 106);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(314, 81);
             this.groupBox9.TabIndex = 6;
@@ -253,7 +254,7 @@
             // 
             this.groupBox8.Controls.Add(this.DLChromeDriver);
             this.groupBox8.Controls.Add(this.progressBar4);
-            this.groupBox8.Location = new System.Drawing.Point(6, 69);
+            this.groupBox8.Location = new System.Drawing.Point(6, 19);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(314, 81);
             this.groupBox8.TabIndex = 5;
@@ -279,7 +280,7 @@
             // 
             // DLAccountCreator
             // 
-            this.DLAccountCreator.Location = new System.Drawing.Point(12, 24);
+            this.DLAccountCreator.Location = new System.Drawing.Point(18, 22);
             this.DLAccountCreator.Name = "DLAccountCreator";
             this.DLAccountCreator.Size = new System.Drawing.Size(302, 35);
             this.DLAccountCreator.TabIndex = 3;
@@ -291,16 +292,17 @@
             // 
             this.groupBox7.Controls.Add(this.PokeAlarmConfig);
             this.groupBox7.Controls.Add(this.PoGoConfig);
+            this.groupBox7.Controls.Add(this.DLAccountCreator);
             this.groupBox7.Location = new System.Drawing.Point(335, 3);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(334, 64);
+            this.groupBox7.Size = new System.Drawing.Size(334, 93);
             this.groupBox7.TabIndex = 7;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Step 3";
             // 
             // PokeAlarmConfig
             // 
-            this.PokeAlarmConfig.Location = new System.Drawing.Point(173, 22);
+            this.PokeAlarmConfig.Location = new System.Drawing.Point(173, 64);
             this.PokeAlarmConfig.Name = "PokeAlarmConfig";
             this.PokeAlarmConfig.Size = new System.Drawing.Size(155, 23);
             this.PokeAlarmConfig.TabIndex = 8;
@@ -310,7 +312,7 @@
             // 
             // PoGoConfig
             // 
-            this.PoGoConfig.Location = new System.Drawing.Point(6, 22);
+            this.PoGoConfig.Location = new System.Drawing.Point(6, 64);
             this.PoGoConfig.Name = "PoGoConfig";
             this.PoGoConfig.Size = new System.Drawing.Size(155, 23);
             this.PoGoConfig.TabIndex = 7;
@@ -323,7 +325,7 @@
             this.groupBox10.Controls.Add(this.GMapsAPI);
             this.groupBox10.Controls.Add(this.label1);
             this.groupBox10.Controls.Add(this.textBox1);
-            this.groupBox10.Location = new System.Drawing.Point(335, 73);
+            this.groupBox10.Location = new System.Drawing.Point(335, 102);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(334, 71);
             this.groupBox10.TabIndex = 9;
@@ -381,7 +383,7 @@
             this.groupBox11.Controls.Add(this.textBox2);
             this.groupBox11.Controls.Add(this.button1);
             this.groupBox11.Controls.Add(this.label2);
-            this.groupBox11.Location = new System.Drawing.Point(335, 150);
+            this.groupBox11.Location = new System.Drawing.Point(335, 179);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(334, 92);
             this.groupBox11.TabIndex = 10;
@@ -427,7 +429,7 @@
             // 
             this.groupBox12.Controls.Add(this.button2);
             this.groupBox12.Controls.Add(this.label3);
-            this.groupBox12.Location = new System.Drawing.Point(335, 248);
+            this.groupBox12.Location = new System.Drawing.Point(335, 277);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(334, 71);
             this.groupBox12.TabIndex = 11;
@@ -456,7 +458,7 @@
             // groupBox13
             // 
             this.groupBox13.Controls.Add(this.label5);
-            this.groupBox13.Location = new System.Drawing.Point(335, 325);
+            this.groupBox13.Location = new System.Drawing.Point(335, 354);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Size = new System.Drawing.Size(334, 81);
             this.groupBox13.TabIndex = 12;
@@ -471,6 +473,16 @@
             this.label5.Size = new System.Drawing.Size(314, 52);
             this.label5.TabIndex = 1;
             this.label5.Text = resources.GetString("label5.Text");
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(4, 197);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(318, 26);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "At this point you will need to reboot your computer and come back\r\nand continue f" +
+    "rom step 3\r\n";
             // 
             // Form3
             // 
@@ -491,6 +503,7 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
@@ -548,5 +561,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
