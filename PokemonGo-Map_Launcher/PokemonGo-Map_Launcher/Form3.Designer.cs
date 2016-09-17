@@ -43,6 +43,7 @@
             this.buttonNPM = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.progressBar5 = new System.Windows.Forms.ProgressBar();
             this.DownloadPJS = new System.Windows.Forms.Button();
@@ -68,7 +69,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -203,24 +203,38 @@
             this.groupBox5.Controls.Add(this.groupBox4);
             this.groupBox5.Controls.Add(this.groupBox2);
             this.groupBox5.Controls.Add(this.groupBox3);
-            this.groupBox5.Location = new System.Drawing.Point(3, 3);
+            this.groupBox5.Enabled = false;
+            this.groupBox5.Location = new System.Drawing.Point(25, 563);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(326, 239);
             this.groupBox5.TabIndex = 5;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Step 1";
+            this.groupBox5.Visible = false;
             // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.label6);
             this.groupBox6.Controls.Add(this.groupBox9);
             this.groupBox6.Controls.Add(this.groupBox8);
-            this.groupBox6.Location = new System.Drawing.Point(3, 248);
+            this.groupBox6.Enabled = false;
+            this.groupBox6.Location = new System.Drawing.Point(357, 563);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(326, 239);
             this.groupBox6.TabIndex = 6;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Step 2";
+            this.groupBox6.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(4, 197);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(318, 26);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "At this point you will need to reboot your computer and come back\r\nand continue f" +
+    "rom step 3\r\n";
             // 
             // groupBox9
             // 
@@ -293,12 +307,12 @@
             this.groupBox7.Controls.Add(this.PokeAlarmConfig);
             this.groupBox7.Controls.Add(this.PoGoConfig);
             this.groupBox7.Controls.Add(this.DLAccountCreator);
-            this.groupBox7.Location = new System.Drawing.Point(335, 3);
+            this.groupBox7.Location = new System.Drawing.Point(3, 3);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(334, 93);
             this.groupBox7.TabIndex = 7;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Step 3";
+            this.groupBox7.Text = "Step 1";
             // 
             // PokeAlarmConfig
             // 
@@ -325,12 +339,12 @@
             this.groupBox10.Controls.Add(this.GMapsAPI);
             this.groupBox10.Controls.Add(this.label1);
             this.groupBox10.Controls.Add(this.textBox1);
-            this.groupBox10.Location = new System.Drawing.Point(335, 102);
+            this.groupBox10.Location = new System.Drawing.Point(3, 102);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(334, 71);
             this.groupBox10.TabIndex = 9;
             this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Step 4";
+            this.groupBox10.Text = "Step 2";
             // 
             // GMapsAPI
             // 
@@ -364,8 +378,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.groupBox5);
-            this.flowLayoutPanel1.Controls.Add(this.groupBox6);
             this.flowLayoutPanel1.Controls.Add(this.groupBox7);
             this.flowLayoutPanel1.Controls.Add(this.groupBox10);
             this.flowLayoutPanel1.Controls.Add(this.groupBox11);
@@ -374,7 +386,7 @@
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(13, 21);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(681, 493);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(347, 443);
             this.flowLayoutPanel1.TabIndex = 10;
             // 
             // groupBox11
@@ -383,12 +395,12 @@
             this.groupBox11.Controls.Add(this.textBox2);
             this.groupBox11.Controls.Add(this.button1);
             this.groupBox11.Controls.Add(this.label2);
-            this.groupBox11.Location = new System.Drawing.Point(335, 179);
+            this.groupBox11.Location = new System.Drawing.Point(3, 179);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(334, 92);
             this.groupBox11.TabIndex = 10;
             this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Step 5";
+            this.groupBox11.Text = "Step 3";
             // 
             // label4
             // 
@@ -429,12 +441,12 @@
             // 
             this.groupBox12.Controls.Add(this.button2);
             this.groupBox12.Controls.Add(this.label3);
-            this.groupBox12.Location = new System.Drawing.Point(335, 277);
+            this.groupBox12.Location = new System.Drawing.Point(3, 277);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(334, 71);
             this.groupBox12.TabIndex = 11;
             this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "Step 6";
+            this.groupBox12.Text = "Step 4";
             // 
             // button2
             // 
@@ -458,12 +470,12 @@
             // groupBox13
             // 
             this.groupBox13.Controls.Add(this.label5);
-            this.groupBox13.Location = new System.Drawing.Point(335, 354);
+            this.groupBox13.Location = new System.Drawing.Point(3, 354);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Size = new System.Drawing.Size(334, 81);
             this.groupBox13.TabIndex = 12;
             this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "Step 7";
+            this.groupBox13.Text = "Step 5";
             // 
             // label5
             // 
@@ -474,28 +486,20 @@
             this.label5.TabIndex = 1;
             this.label5.Text = resources.GetString("label5.Text");
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(4, 197);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(318, 26);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "At this point you will need to reboot your computer and come back\r\nand continue f" +
-    "rom step 3\r\n";
-            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(706, 526);
+            this.ClientSize = new System.Drawing.Size(372, 476);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.groupBox6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form3";
             this.ShowIcon = false;
-            this.Text = "Download PreReqs";
+            this.Text = "Configurator";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);

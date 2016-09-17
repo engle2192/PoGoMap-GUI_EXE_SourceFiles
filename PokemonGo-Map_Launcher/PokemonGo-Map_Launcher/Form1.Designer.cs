@@ -406,7 +406,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(89, 89);
             this.button7.TabIndex = 33;
-            this.button7.Text = "Install";
+            this.button7.Text = "Setup";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
