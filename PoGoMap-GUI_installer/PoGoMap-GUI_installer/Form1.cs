@@ -35,7 +35,7 @@ namespace PoGoMap_GUI_installer
                 process.StartInfo = startInfo;
                 process.Start();
                 process.WaitForExit();
-                label1.Text = "Please close window to launch PoGoMap-GUI";
+                label1.Text = "Done! You can now close this window...";
 
             }
             else
@@ -92,12 +92,12 @@ namespace PoGoMap_GUI_installer
             process1.StartInfo = startInfo1;
             process1.Start();
             process1.WaitForExit();
-            label1.Text = "Please close window to launch PoGoMap-GUI";
+            label1.Text = "Done! You can now close this window...";
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            System.Diagnostics.Process.Start(@".\PoGoMap-GUI\PokemonGo-Map_Launcher");
+            //System.Diagnostics.Process.Start(@".\PoGoMap-GUI\PokemonGo-Map_Launcher");
         }
     }
 }
