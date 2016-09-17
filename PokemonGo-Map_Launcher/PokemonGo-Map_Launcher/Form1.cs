@@ -15,6 +15,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Net.NetworkInformation;
 
+
 namespace PokemonGo_Map_Launcher
 {
     public partial class Form1 : Form
@@ -22,6 +23,26 @@ namespace PokemonGo_Map_Launcher
         public Form1()
         {
             InitializeComponent();
+        }
+        public string DPath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+        public string currentVersion = "3.1.1";
+
+        public static bool CheckForInternetConnection()
+        {
+            try
+            {
+                using (var client = new WebClient())
+                {
+                    using (var stream = client.OpenRead("http://www.google.com"))
+                    {
+                        return true;
+                    }
+                }
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -33,8 +54,39 @@ namespace PokemonGo_Map_Launcher
             label5.Text = "";
             label11.Text = "";
             label13.Text = " --webhook-updates-only";
+            linkLabel1.Text = "PoGo-GUI v" + currentVersion;
+
+            if (CheckForInternetConnection() == true)
+            {
+                WebClient client = new WebClient();
+                client.DownloadFileCompleted += new AsyncCompletedEventHandler(client_DownloadFileCompleted);
+                client.DownloadFileAsync(new Uri("http://go2engle.com/pogomap/version.txt"), DPath + @"\version.txt");
+            }
+            else { }
 
         }
+        void client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
+        {
+            string readVersion = File.ReadAllText(@".\version.txt");
+            if(currentVersion==readVersion)
+            {
+
+            }
+            else
+            {
+                DialogResult dialogResult = MessageBox.Show("There is a new update, Would you like to update now?", "Update", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    System.Diagnostics.Process.Start("PoGoMap-GUI_updater.exe");
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+
+                }
+            }
+        }
+
+
         [DllImport("user32.dll")]
         static extern IntPtr SetParent(IntPtr hWndChild, IntPtr hWndNewParent);
         [DllImport("user32.dll", SetLastError = true)]

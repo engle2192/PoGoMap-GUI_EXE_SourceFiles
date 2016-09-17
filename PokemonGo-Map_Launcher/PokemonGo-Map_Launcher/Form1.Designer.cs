@@ -402,7 +402,7 @@
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(198, 516);
+            this.button7.Location = new System.Drawing.Point(104, 516);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(89, 89);
             this.button7.TabIndex = 33;
@@ -593,15 +593,17 @@
             // 
             this.button3.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Enabled = false;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(104, 516);
+            this.button3.Location = new System.Drawing.Point(198, 516);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(89, 89);
             this.button3.TabIndex = 46;
             this.button3.Text = "Check For Updates";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
