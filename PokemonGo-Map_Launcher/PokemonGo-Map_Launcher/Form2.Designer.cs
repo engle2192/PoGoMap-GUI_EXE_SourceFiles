@@ -486,6 +486,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
+            this.enable_push = new System.Windows.Forms.CheckBox();
+            this.push_api = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -498,7 +502,10 @@
             this.access_token = new System.Windows.Forms.TextBox();
             this.enable_twitter = new System.Windows.Forms.CheckBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.slack_api = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.enable_slack = new System.Windows.Forms.CheckBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -510,13 +517,6 @@
             this.auth_token = new System.Windows.Forms.TextBox();
             this.account_sid = new System.Windows.Forms.TextBox();
             this.enableTwilo = new System.Windows.Forms.CheckBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.push_api = new System.Windows.Forms.TextBox();
-            this.enable_push = new System.Windows.Forms.CheckBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.slack_api = new System.Windows.Forms.TextBox();
-            this.enable_slack = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -6014,6 +6014,47 @@
             this.tabPage1.Text = "Pushbullet";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(85, 6);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(440, 13);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "*IMPORTANT* Make sure your keys are in quotes. ex. \"fadsf7dfda78fa78fd\"";
+            // 
+            // enable_push
+            // 
+            this.enable_push.AutoSize = true;
+            this.enable_push.Checked = global::PokemonGo_Map_Launcher.Properties.Settings.Default.enable_push;
+            this.enable_push.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::PokemonGo_Map_Launcher.Properties.Settings.Default, "enable_push", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.enable_push.Location = new System.Drawing.Point(8, 5);
+            this.enable_push.Name = "enable_push";
+            this.enable_push.Size = new System.Drawing.Size(59, 17);
+            this.enable_push.TabIndex = 0;
+            this.enable_push.Text = "Enable";
+            this.enable_push.UseVisualStyleBackColor = true;
+            // 
+            // push_api
+            // 
+            this.push_api.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::PokemonGo_Map_Launcher.Properties.Settings.Default, "pushapi", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.push_api.Location = new System.Drawing.Point(55, 22);
+            this.push_api.Name = "push_api";
+            this.push_api.Size = new System.Drawing.Size(215, 20);
+            this.push_api.TabIndex = 1;
+            this.push_api.Text = global::PokemonGo_Map_Launcher.Properties.Settings.Default.pushapi;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(5, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "API Key:";
+            // 
             // tabPage2
             // 
             this.tabPage2.AutoScroll = true;
@@ -6144,6 +6185,24 @@
             this.tabPage3.Text = "Slack";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // slack_api
+            // 
+            this.slack_api.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::PokemonGo_Map_Launcher.Properties.Settings.Default, "slackapi", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.slack_api.Location = new System.Drawing.Point(52, 23);
+            this.slack_api.Name = "slack_api";
+            this.slack_api.Size = new System.Drawing.Size(215, 20);
+            this.slack_api.TabIndex = 4;
+            this.slack_api.Text = global::PokemonGo_Map_Launcher.Properties.Settings.Default.slackapi;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 26);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(48, 13);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "API Key:";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -6154,6 +6213,18 @@
             this.label7.Size = new System.Drawing.Size(440, 13);
             this.label7.TabIndex = 6;
             this.label7.Text = "*IMPORTANT* Make sure your keys are in quotes. ex. \"fadsf7dfda78fa78fd\"";
+            // 
+            // enable_slack
+            // 
+            this.enable_slack.AutoSize = true;
+            this.enable_slack.Checked = global::PokemonGo_Map_Launcher.Properties.Settings.Default.enable_slack;
+            this.enable_slack.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::PokemonGo_Map_Launcher.Properties.Settings.Default, "enable_slack", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.enable_slack.Location = new System.Drawing.Point(6, 6);
+            this.enable_slack.Name = "enable_slack";
+            this.enable_slack.Size = new System.Drawing.Size(59, 17);
+            this.enable_slack.TabIndex = 3;
+            this.enable_slack.Text = "Enable";
+            this.enable_slack.UseVisualStyleBackColor = true;
             // 
             // tabPage4
             // 
@@ -6262,85 +6333,14 @@
             // enableTwilo
             // 
             this.enableTwilo.AutoSize = true;
-            this.enableTwilo.Checked = global::PokemonGo_Map_Launcher.Properties.Settings.Default.enable_twitter;
-            this.enableTwilo.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::PokemonGo_Map_Launcher.Properties.Settings.Default, "enable_twitter", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.enableTwilo.Checked = global::PokemonGo_Map_Launcher.Properties.Settings.Default.enableTwilio;
+            this.enableTwilo.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::PokemonGo_Map_Launcher.Properties.Settings.Default, "enableTwilio", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.enableTwilo.Location = new System.Drawing.Point(6, 8);
             this.enableTwilo.Name = "enableTwilo";
             this.enableTwilo.Size = new System.Drawing.Size(59, 17);
             this.enableTwilo.TabIndex = 12;
             this.enableTwilo.Text = "Enable";
             this.enableTwilo.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(85, 6);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(440, 13);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "*IMPORTANT* Make sure your keys are in quotes. ex. \"fadsf7dfda78fa78fd\"";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "API Key:";
-            // 
-            // push_api
-            // 
-            this.push_api.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::PokemonGo_Map_Launcher.Properties.Settings.Default, "pushapi", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.push_api.Location = new System.Drawing.Point(55, 22);
-            this.push_api.Name = "push_api";
-            this.push_api.Size = new System.Drawing.Size(215, 20);
-            this.push_api.TabIndex = 1;
-            this.push_api.Text = global::PokemonGo_Map_Launcher.Properties.Settings.Default.pushapi;
-            // 
-            // enable_push
-            // 
-            this.enable_push.AutoSize = true;
-            this.enable_push.Checked = global::PokemonGo_Map_Launcher.Properties.Settings.Default.enable_push;
-            this.enable_push.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::PokemonGo_Map_Launcher.Properties.Settings.Default, "enable_push", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.enable_push.Location = new System.Drawing.Point(8, 5);
-            this.enable_push.Name = "enable_push";
-            this.enable_push.Size = new System.Drawing.Size(59, 17);
-            this.enable_push.TabIndex = 0;
-            this.enable_push.Text = "Enable";
-            this.enable_push.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 26);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "API Key:";
-            // 
-            // slack_api
-            // 
-            this.slack_api.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::PokemonGo_Map_Launcher.Properties.Settings.Default, "slackapi", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.slack_api.Location = new System.Drawing.Point(52, 23);
-            this.slack_api.Name = "slack_api";
-            this.slack_api.Size = new System.Drawing.Size(215, 20);
-            this.slack_api.TabIndex = 4;
-            this.slack_api.Text = global::PokemonGo_Map_Launcher.Properties.Settings.Default.slackapi;
-            // 
-            // enable_slack
-            // 
-            this.enable_slack.AutoSize = true;
-            this.enable_slack.Checked = global::PokemonGo_Map_Launcher.Properties.Settings.Default.enable_slack;
-            this.enable_slack.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::PokemonGo_Map_Launcher.Properties.Settings.Default, "enable_slack", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.enable_slack.Location = new System.Drawing.Point(6, 6);
-            this.enable_slack.Name = "enable_slack";
-            this.enable_slack.Size = new System.Drawing.Size(59, 17);
-            this.enable_slack.TabIndex = 3;
-            this.enable_slack.Text = "Enable";
-            this.enable_slack.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 

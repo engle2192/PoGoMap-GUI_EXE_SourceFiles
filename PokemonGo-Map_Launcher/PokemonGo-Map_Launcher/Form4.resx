@@ -118,7 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="richTextBox1.Text" xml:space="preserve">
-    <value>9/18/16 v3.1.4
+    <value>9/18/16 v3.1.5
+-Fixed issue with twilio and twitter enable button linked
+
+9/18/16 v3.1.4
 - Fixed issue when saving notifications that would cause a json error.
 
 9/17/16: v3.1.3

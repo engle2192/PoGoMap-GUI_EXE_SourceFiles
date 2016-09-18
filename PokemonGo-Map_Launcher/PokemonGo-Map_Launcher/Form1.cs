@@ -25,7 +25,7 @@ namespace PokemonGo_Map_Launcher
             InitializeComponent();
         }
         public string DPath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-        public string currentVersion = "3.1.4";
+        public string currentVersion = "3.1.5";
 
         public static bool CheckForInternetConnection()
         {
