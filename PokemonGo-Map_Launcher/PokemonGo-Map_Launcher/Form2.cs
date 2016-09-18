@@ -22,7 +22,14 @@ namespace PokemonGo_Map_Launcher
        
         private void Form2_Load(object sender, EventArgs e)
         {
-            
+            foreach (TabPage tp in tabControl1.TabPages)
+            {
+                tabPage1.Show();
+                tabPage2.Show();
+                tabPage3.Show();
+                tabPage4.Show();
+                tabPage1.Show();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
