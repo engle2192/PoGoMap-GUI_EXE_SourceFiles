@@ -25,7 +25,7 @@ namespace PokemonGo_Map_Launcher
             InitializeComponent();
         }
         public string DPath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-        public string currentVersion = "3.1.5";
+        public string currentVersion = "3.1.8";
 
         public static bool CheckForInternetConnection()
         {
@@ -45,6 +45,8 @@ namespace PokemonGo_Map_Launcher
             }
         }
 
+
+        #region FormLoad
         private void Form1_Load(object sender, EventArgs e)
         {
             comboBox2.Text = "13";
@@ -54,17 +56,40 @@ namespace PokemonGo_Map_Launcher
             label5.Text = "";
             label11.Text = "";
             label13.Text = " --webhook-updates-only";
+            ivcheck.Text = " -enc";
+            NewsLabel.Text = "";
             linkLabel1.Text = "PoGo-GUI v" + currentVersion;
+            foreach (TabPage tp in tabControl1.TabPages)
+            {
+                tabPage1.Show();
+                tabPage2.Show();
+                tabPage3.Show();
+                tabPage1.Show();
+            }
 
             if (CheckForInternetConnection() == true)
             {
                 WebClient client = new WebClient();
                 client.DownloadFileCompleted += new AsyncCompletedEventHandler(client_DownloadFileCompleted);
                 client.DownloadFileAsync(new Uri("http://go2engle.com/pogomap/version.txt"), DPath + @"\version.txt");
+
+            }
+            else { }
+
+            if (CheckForInternetConnection() == true)
+            {
+
+                WebClient client = new WebClient();
+                client.DownloadFileCompleted += new AsyncCompletedEventHandler(client_DownloadFileCompleted2);
+                client.DownloadFileAsync(new Uri("http://go2engle.com/pogomap/news.txt"), DPath + @"\news.txt");
             }
             else { }
 
         }
+
+        #endregion
+
+
         void client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
             string readVersion = File.ReadAllText(@".\version.txt");
@@ -85,6 +110,11 @@ namespace PokemonGo_Map_Launcher
                 }
             }
         }
+        void client_DownloadFileCompleted2(object sender, AsyncCompletedEventArgs e)
+        {
+            string news = File.ReadAllText(@".\news.txt");
+            NewsLabel.Text = news;
+        }
 
 
         [DllImport("user32.dll")]
@@ -103,6 +133,20 @@ namespace PokemonGo_Map_Launcher
                 }
             }
             throw new Exception("Local IP Address Not Found!");
+        }
+        public static string getBetween(string strSource, string strStart, string strEnd)
+        {
+            int Start, End;
+            if (strSource.Contains(strStart) && strSource.Contains(strEnd))
+            {
+                Start = strSource.IndexOf(strStart, 0) + strStart.Length;
+                End = strSource.IndexOf(strEnd, Start);
+                return strSource.Substring(Start, End - Start);
+            }
+            else
+            {
+                return "";
+            }
         }
 
 
@@ -125,7 +169,7 @@ namespace PokemonGo_Map_Launcher
         private void button1_Click(object sender, EventArgs e)
         {
 
-            Process p = Process.Start("cmd.exe", @"/c cd PokemonGo-Map & python runserver.py -enc -l " + textBox2.Text + " -st " + comboBox2.Text + label2.Text + label3.Text + label4.Text + label13.Text + label5.Text + label11.Text + " -H " + GetLocalIPAddress() + " -P " + textBox4.Text + " -wh http://" + GetLocalIPAddress() + ":" + textBox5.Text + "& pause");
+            Process p = Process.Start("cmd.exe", @"/c cd PokemonGo-Map & python runserver.py -ac usernames.csv -l " + textBox2.Text + " -st " + comboBox2.Text + label2.Text + label3.Text + label4.Text + label13.Text + label5.Text + label11.Text + " -H 0.0.0.0 -P " + textBox4.Text + " -wh http://" + GetLocalIPAddress() + ":" + textBox5.Text + ivcheck.Text + "& pause");
             Thread.Sleep(150); // Allow the process to open it's window
             SetParent(p.MainWindowHandle, panel2.Handle);
             MoveWindow(p.MainWindowHandle, 0, 0, panel2.Width, panel2.Height, true);
@@ -179,20 +223,14 @@ namespace PokemonGo_Map_Launcher
             //Account Creation
             if (string.IsNullOrWhiteSpace(textBox3.Text))
             {
-                var lines = File.ReadAllLines(@".\PokemonGo-map\config\config.ini");
-                lines[4] = "password:[" + textBox1.Text + "]";
-                File.WriteAllLines(@".\PokemonGo-map\config\config.ini", lines);
-                Process p = Process.Start("cmd.exe", @"/C cd PokemonGo-Map & pikaptcha -p " + textBox1.Text + " -c " + comboBox1.Text + @" & python banned.py -f usernames.txt & powershell -executionpolicy unrestricted .\usernames.ps1 & pause");
+                Process p = Process.Start("cmd.exe", @"/C cd PokemonGo-Map & pikaptcha -p " + textBox1.Text + " -c " + comboBox1.Text + @" & powershell -executionpolicy unrestricted .\usernamescsv.ps1 & python banned.py -f usernames.txt & powershell -executionpolicy unrestricted .\usernamescsv.ps1 & pause");
                 Thread.Sleep(150); // Allow the process to open it's window
                 SetParent(p.MainWindowHandle, panel2.Handle);
                 MoveWindow(p.MainWindowHandle, 0, 0, panel2.Width, panel2.Height, true);
             }
             else
             {
-                var lines = File.ReadAllLines(@".\PokemonGo-map\config\config.ini");
-                lines[4] = "password:[" + textBox1.Text + "]";
-                File.WriteAllLines(@".\PokemonGo-map\config\config.ini", lines);
-                Process p = Process.Start("cmd.exe", @"/C cd PokemonGo-Map & pikaptcha -r " + textBox3.Text + " -p " + textBox1.Text + " -c " + comboBox1.Text + @" & python banned.py -f usernames.txt & powershell -executionpolicy unrestricted .\usernames.ps1 & pause");
+                Process p = Process.Start("cmd.exe", @"/C cd PokemonGo-Map & pikaptcha -r " + textBox3.Text + " -p " + textBox1.Text + " -c " + comboBox1.Text + @" & powershell -executionpolicy unrestricted .\usernamescsv.ps1 & python banned.py -f usernames.txt & powershell -executionpolicy unrestricted .\usernamescsv.ps1 & pause");
                 Thread.Sleep(150); // Allow the process to open it's window
                 SetParent(p.MainWindowHandle, panel2.Handle);
                 MoveWindow(p.MainWindowHandle, 0, 0, panel2.Width, panel2.Height, true);
@@ -202,7 +240,7 @@ namespace PokemonGo_Map_Launcher
         private void button8_Click(object sender, EventArgs e)
         {
             //RunNotifications
-            Process p = Process.Start("cmd.exe", @"/C cd PokeAlarm & python runwebhook.py -H " + GetLocalIPAddress() + " -P " + textBox5.Text + " & pause");
+            Process p = Process.Start("cmd.exe", @"/C cd PokeAlarm & python runwebhook.py -H 0.0.0.0 -P " + textBox5.Text + " & pause");
             Thread.Sleep(150); // Allow the process to open it's window
             SetParent(p.MainWindowHandle, panel1.Handle);
             MoveWindow(p.MainWindowHandle, 0, 0, panel1.Width, panel1.Height, true);
@@ -210,7 +248,7 @@ namespace PokemonGo_Map_Launcher
       
         private void button9_Click(object sender, EventArgs e)
         {
-            Process p = Process.Start("cmd.exe", @"/c cd PokemonGo-Map & python banned.py -f usernames.txt & powershell -executionpolicy unrestricted .\usernames.ps1 & Pause");
+            Process p = Process.Start("cmd.exe", @"/c cd PokemonGo-Map & powershell -executionpolicy unrestricted .\usernamescsv.ps1 & python banned.py -f usernames.txt & powershell -executionpolicy unrestricted .\usernamescsv.ps1 & Pause");
             Thread.Sleep(150); // Allow the process to open it's window
             SetParent(p.MainWindowHandle, panel2.Handle);
             MoveWindow(p.MainWindowHandle, 0, 0, panel2.Width, panel2.Height, true);
@@ -222,7 +260,7 @@ namespace PokemonGo_Map_Launcher
         }
         private void button2_Click_1(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("http://" + GetLocalIPAddress() + ":" + textBox4.Text);
+            System.Diagnostics.Process.Start("http://localhost:" + textBox4.Text);
         }
         private void button3_Click(object sender, EventArgs e)
         {
@@ -237,7 +275,45 @@ namespace PokemonGo_Map_Launcher
             }
             
         }
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            if (MobileAccess.Text == "Enable Mobile Access")
+            {
+                System.Diagnostics.Process process = new System.Diagnostics.Process();
+                System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+                startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+                startInfo.FileName = "cmd.exe";
+                startInfo.Arguments = @"/C .\bin\ngrok.exe http " + textBox4.Text;
+                process.StartInfo = startInfo;
+                process.Start();
 
+                int milliseconds = 2000;
+                Thread.Sleep(milliseconds);
+
+                System.Diagnostics.Process process1 = new System.Diagnostics.Process();
+                System.Diagnostics.ProcessStartInfo startInfo1 = new System.Diagnostics.ProcessStartInfo();
+                startInfo1.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+                startInfo1.FileName = "cmd.exe";
+                startInfo1.Arguments = @"/C .\bin\curl.exe http://localhost:4040/api/tunnels > .\bin\tunnels.txt";
+                process1.StartInfo = startInfo1;
+                process1.Start();
+                Thread.Sleep(milliseconds);
+                string text = System.IO.File.ReadAllText(@".\bin\tunnels.txt");
+                string url = getBetween(text, "http://", ".ngrok.io");
+                linkLabel4.Text = "http://" + url + ".ngrok.io";
+
+                MobileAccess.Text = "Disable Mobile Access";
+            }
+            else
+            {
+                foreach (var process in Process.GetProcessesByName("ngrok"))
+                {
+                    process.Kill();
+                }
+
+                MobileAccess.Text = "Enable Mobile Access";
+            }
+        }
         #endregion
 
         #region CheckBoxes
@@ -312,10 +388,40 @@ namespace PokemonGo_Map_Launcher
                 label13.Text = " --webhook-updates-only";
             }
         }
+        private void checkBox7_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox7.Checked)
+            {
+                ivcheck.Text = "";
+            }
+            else
+            {
+                ivcheck.Text = " -enc";
+            }
+        }
 
 
         #endregion
 
+        #region LinkLabels
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/engle2192/PoGoMap-GUI/releases");
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://go2engle.com/");
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form4 f4 = new Form4();
+            f4.ShowDialog();
+        }
+        #endregion
+
+        #region FormClosing
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Properties.Settings.Default.CaptchaKEY = textBox3.Text;
@@ -324,26 +430,20 @@ namespace PokemonGo_Map_Launcher
             Properties.Settings.Default.MapPort = textBox4.Text;
             Properties.Settings.Default.NotificationsPort = textBox5.Text;
             Properties.Settings.Default.Save();
+            foreach (var process in Process.GetProcessesByName("ngrok"))
+            {
+                process.Kill();
+            }
             if (MessageBox.Show("Are all your command windows closed?", "IMPORTANT", MessageBoxButtons.YesNo) == DialogResult.No)
             {
                 e.Cancel = true;
             }
         }
+        #endregion
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://github.com/engle2192/PoGoMap-GUI/releases");
-        }
 
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://github.com/engle2192/PoGoMap-GUI/issues");
-        }
 
-        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Form4 f4 = new Form4();
-            f4.ShowDialog();
-        }
+
+
     }
 }

@@ -293,10 +293,7 @@ namespace PokemonGo_Map_Launcher
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            var lines = File.ReadAllLines(@".\PokemonGo-map\config\config.ini");
-            lines[4] = "password:[" + textBox2.Text + "]";
-            File.WriteAllLines(@".\PokemonGo-map\config\config.ini", lines);
-            Process p = Process.Start("cmd.exe", @"/C cd PokemonGo-Map & pikaptcha -p " + textBox2.Text + @" -c 5 & python banned.py -f usernames.txt & powershell -executionpolicy unrestricted .\usernames.ps1 & pause");
+            Process p = Process.Start("cmd.exe", @"/C cd PokemonGo-Map & pikaptcha -p " + textBox2.Text + @" -c 5 & powershell -executionpolicy unrestricted .\usernamescsv.ps1 & pause");
         }
 
         private void button2_Click(object sender, EventArgs e)

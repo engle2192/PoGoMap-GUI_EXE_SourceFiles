@@ -2069,7 +2069,7 @@ namespace PokemonGo_Map_Launcher
                 File.WriteAllLines(@".\PokeAlarm\alarms.json", lines);
             }
 
-
+            MessageBox.Show("Save complete!");
 
         }
 

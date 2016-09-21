@@ -65,14 +65,27 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.button3 = new System.Windows.Forms.Button();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.MobileAccess = new System.Windows.Forms.Button();
+            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.ivcheck = new System.Windows.Forms.Label();
+            this.NewsLabel = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -99,7 +112,7 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(9, 516);
+            this.button4.Location = new System.Drawing.Point(102, 527);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(89, 89);
             this.button4.TabIndex = 4;
@@ -115,7 +128,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button5.Location = new System.Drawing.Point(9, 421);
+            this.button5.Location = new System.Drawing.Point(6, 527);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(89, 89);
             this.button5.TabIndex = 5;
@@ -129,7 +142,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 353);
+            this.label1.Location = new System.Drawing.Point(3, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 13);
             this.label1.TabIndex = 7;
@@ -143,9 +156,9 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(199, 421);
+            this.button6.Location = new System.Drawing.Point(6, 81);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(89, 89);
+            this.button6.Size = new System.Drawing.Size(263, 38);
             this.button6.TabIndex = 8;
             this.button6.Text = "Create Accounts";
             this.toolTip1.SetToolTip(this.button6, "Create accounts with the password used above. Always use the same password! Check" +
@@ -168,7 +181,7 @@
             "8",
             "9",
             "10"});
-            this.comboBox1.Location = new System.Drawing.Point(220, 368);
+            this.comboBox1.Location = new System.Drawing.Point(202, 24);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(67, 21);
             this.comboBox1.TabIndex = 9;
@@ -195,7 +208,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.Color.Transparent;
             this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(11, 228);
+            this.checkBox1.Location = new System.Drawing.Point(3, 12);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(109, 17);
             this.checkBox1.TabIndex = 15;
@@ -218,7 +231,7 @@
             this.checkBox2.AutoSize = true;
             this.checkBox2.BackColor = System.Drawing.Color.Transparent;
             this.checkBox2.ForeColor = System.Drawing.Color.White;
-            this.checkBox2.Location = new System.Drawing.Point(11, 252);
+            this.checkBox2.Location = new System.Drawing.Point(3, 36);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(80, 17);
             this.checkBox2.TabIndex = 17;
@@ -241,7 +254,7 @@
             this.checkBox3.AutoSize = true;
             this.checkBox3.BackColor = System.Drawing.Color.Transparent;
             this.checkBox3.ForeColor = System.Drawing.Color.White;
-            this.checkBox3.Location = new System.Drawing.Point(126, 252);
+            this.checkBox3.Location = new System.Drawing.Point(118, 36);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(95, 17);
             this.checkBox3.TabIndex = 19;
@@ -254,7 +267,7 @@
             this.checkBox4.AutoSize = true;
             this.checkBox4.BackColor = System.Drawing.Color.Transparent;
             this.checkBox4.ForeColor = System.Drawing.Color.White;
-            this.checkBox4.Location = new System.Drawing.Point(126, 275);
+            this.checkBox4.Location = new System.Drawing.Point(118, 59);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(113, 17);
             this.checkBox4.TabIndex = 20;
@@ -307,7 +320,7 @@
             "18",
             "19",
             "20"});
-            this.comboBox2.Location = new System.Drawing.Point(66, 297);
+            this.comboBox2.Location = new System.Drawing.Point(58, 102);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(52, 21);
             this.comboBox2.TabIndex = 23;
@@ -317,7 +330,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(10, 302);
+            this.label6.Location = new System.Drawing.Point(2, 107);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 13);
             this.label6.TabIndex = 24;
@@ -328,7 +341,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(124, 302);
+            this.label7.Location = new System.Drawing.Point(116, 107);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 13);
             this.label7.TabIndex = 25;
@@ -342,9 +355,9 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button9.Location = new System.Drawing.Point(104, 421);
+            this.button9.Location = new System.Drawing.Point(6, 125);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(89, 89);
+            this.button9.Size = new System.Drawing.Size(263, 38);
             this.button9.TabIndex = 27;
             this.button9.Text = "Check Accounts";
             this.toolTip1.SetToolTip(this.button9, "Check to see if you have banned accounts. Will remove any banned accounts found.");
@@ -357,7 +370,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(14, 398);
+            this.label8.Location = new System.Drawing.Point(3, 54);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(86, 13);
             this.label8.TabIndex = 29;
@@ -382,7 +395,7 @@
             this.panel2.Controls.Add(this.label9);
             this.panel2.Location = new System.Drawing.Point(294, 229);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(964, 409);
+            this.panel2.Size = new System.Drawing.Size(964, 387);
             this.panel2.TabIndex = 32;
             // 
             // label9
@@ -403,7 +416,7 @@
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(104, 516);
+            this.button7.Location = new System.Drawing.Point(198, 527);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(89, 89);
             this.button7.TabIndex = 33;
@@ -450,7 +463,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(11, 328);
+            this.label10.Location = new System.Drawing.Point(3, 133);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 13);
             this.label10.TabIndex = 36;
@@ -461,7 +474,7 @@
             this.checkBox5.AutoSize = true;
             this.checkBox5.BackColor = System.Drawing.Color.Transparent;
             this.checkBox5.ForeColor = System.Drawing.Color.White;
-            this.checkBox5.Location = new System.Drawing.Point(11, 275);
+            this.checkBox5.Location = new System.Drawing.Point(3, 59);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(87, 17);
             this.checkBox5.TabIndex = 38;
@@ -484,7 +497,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(126, 328);
+            this.label12.Location = new System.Drawing.Point(118, 133);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(90, 13);
             this.label12.TabIndex = 40;
@@ -495,7 +508,7 @@
             this.checkBox6.AutoSize = true;
             this.checkBox6.BackColor = System.Drawing.Color.Transparent;
             this.checkBox6.ForeColor = System.Drawing.Color.White;
-            this.checkBox6.Location = new System.Drawing.Point(126, 221);
+            this.checkBox6.Location = new System.Drawing.Point(118, 5);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(154, 30);
             this.checkBox6.TabIndex = 42;
@@ -517,12 +530,12 @@
             this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkColor = System.Drawing.Color.Lime;
-            this.linkLabel1.Location = new System.Drawing.Point(6, 619);
+            this.linkLabel1.Location = new System.Drawing.Point(6, 621);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(89, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(87, 13);
             this.linkLabel1.TabIndex = 44;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "PoGo-GUI v3.1.3";
+            this.linkLabel1.Text = "PoGo-GUI v3.x.x";
             this.toolTip1.SetToolTip(this.linkLabel1, "Click to check latest releases");
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
@@ -531,7 +544,7 @@
             this.linkLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.LinkColor = System.Drawing.Color.CornflowerBlue;
-            this.linkLabel2.Location = new System.Drawing.Point(205, 619);
+            this.linkLabel2.Location = new System.Drawing.Point(205, 621);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(82, 13);
             this.linkLabel2.TabIndex = 45;
@@ -540,30 +553,27 @@
             this.toolTip1.SetToolTip(this.linkLabel2, "Click to submit a bug");
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
-            // button3
+            // linkLabel3
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Enabled = false;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(198, 516);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(89, 89);
-            this.button3.TabIndex = 46;
-            this.button3.Text = "Check For Updates";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Visible = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.linkLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.linkLabel3.AutoSize = true;
+            this.linkLabel3.LinkColor = System.Drawing.Color.Red;
+            this.linkLabel3.Location = new System.Drawing.Point(118, 621);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(61, 13);
+            this.linkLabel3.TabIndex = 47;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "Change log";
+            this.toolTip1.SetToolTip(this.linkLabel3, "Click to submit a bug");
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // textBox5
             // 
             this.textBox5.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::PokemonGo_Map_Launcher.Properties.Settings.Default, "NotificationsPort", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox5.Location = new System.Drawing.Point(216, 324);
+            this.textBox5.Location = new System.Drawing.Point(208, 129);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(54, 20);
+            this.textBox5.Size = new System.Drawing.Size(61, 20);
             this.textBox5.TabIndex = 41;
             this.textBox5.Text = global::PokemonGo_Map_Launcher.Properties.Settings.Default.NotificationsPort;
             // 
@@ -571,7 +581,7 @@
             // 
             this.textBox4.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::PokemonGo_Map_Launcher.Properties.Settings.Default, "MapPort", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox4.Location = new System.Drawing.Point(66, 324);
+            this.textBox4.Location = new System.Drawing.Point(58, 129);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(54, 20);
             this.textBox4.TabIndex = 37;
@@ -581,7 +591,7 @@
             // 
             this.textBox3.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::PokemonGo_Map_Launcher.Properties.Settings.Default, "CaptchaKEY", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox3.Location = new System.Drawing.Point(106, 395);
+            this.textBox3.Location = new System.Drawing.Point(89, 51);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(181, 20);
             this.textBox3.TabIndex = 28;
@@ -591,9 +601,9 @@
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::PokemonGo_Map_Launcher.Properties.Settings.Default, "StartLOC", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox2.Location = new System.Drawing.Point(187, 298);
+            this.textBox2.Location = new System.Drawing.Point(179, 103);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.Size = new System.Drawing.Size(90, 20);
             this.textBox2.TabIndex = 26;
             this.textBox2.Text = global::PokemonGo_Map_Launcher.Properties.Settings.Default.StartLOC;
             // 
@@ -601,25 +611,148 @@
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::PokemonGo_Map_Launcher.Properties.Settings.Default, "Password", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox1.Location = new System.Drawing.Point(11, 369);
+            this.textBox1.Location = new System.Drawing.Point(2, 25);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(203, 20);
+            this.textBox1.Size = new System.Drawing.Size(194, 20);
             this.textBox1.TabIndex = 6;
             this.textBox1.Text = global::PokemonGo_Map_Launcher.Properties.Settings.Default.Password;
             // 
-            // linkLabel3
+            // tabControl1
             // 
-            this.linkLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.LinkColor = System.Drawing.Color.Red;
-            this.linkLabel3.Location = new System.Drawing.Point(118, 619);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(61, 13);
-            this.linkLabel3.TabIndex = 47;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Change log";
-            this.toolTip1.SetToolTip(this.linkLabel3, "Click to submit a bug");
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Location = new System.Drawing.Point(4, 222);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(283, 299);
+            this.tabControl1.TabIndex = 48;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.tabPage1.Controls.Add(this.checkBox7);
+            this.tabPage1.Controls.Add(this.checkBox1);
+            this.tabPage1.Controls.Add(this.checkBox2);
+            this.tabPage1.Controls.Add(this.checkBox3);
+            this.tabPage1.Controls.Add(this.checkBox4);
+            this.tabPage1.Controls.Add(this.comboBox2);
+            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.checkBox6);
+            this.tabPage1.Controls.Add(this.label7);
+            this.tabPage1.Controls.Add(this.textBox2);
+            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Controls.Add(this.textBox5);
+            this.tabPage1.Controls.Add(this.textBox4);
+            this.tabPage1.Controls.Add(this.checkBox5);
+            this.tabPage1.Controls.Add(this.label12);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(275, 273);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Map Settings";
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox7.ForeColor = System.Drawing.Color.White;
+            this.checkBox7.Location = new System.Drawing.Point(3, 82);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(122, 17);
+            this.checkBox7.TabIndex = 43;
+            this.checkBox7.Text = "Disable IV Checking";
+            this.checkBox7.UseVisualStyleBackColor = false;
+            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Controls.Add(this.comboBox1);
+            this.tabPage2.Controls.Add(this.textBox3);
+            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.button6);
+            this.tabPage2.Controls.Add(this.button9);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(275, 273);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Account Creator";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.tabPage3.Controls.Add(this.label14);
+            this.tabPage3.Controls.Add(this.MobileAccess);
+            this.tabPage3.Controls.Add(this.linkLabel4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(275, 273);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Mobile Access";
+            // 
+            // MobileAccess
+            // 
+            this.MobileAccess.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.MobileAccess.FlatAppearance.BorderSize = 0;
+            this.MobileAccess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MobileAccess.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MobileAccess.Location = new System.Drawing.Point(9, 45);
+            this.MobileAccess.Name = "MobileAccess";
+            this.MobileAccess.Size = new System.Drawing.Size(260, 29);
+            this.MobileAccess.TabIndex = 1;
+            this.MobileAccess.Text = "Enable Mobile Access";
+            this.MobileAccess.UseVisualStyleBackColor = false;
+            this.MobileAccess.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // linkLabel4
+            // 
+            this.linkLabel4.LinkColor = System.Drawing.Color.Lime;
+            this.linkLabel4.Location = new System.Drawing.Point(6, 13);
+            this.linkLabel4.Name = "linkLabel4";
+            this.linkLabel4.Size = new System.Drawing.Size(263, 23);
+            this.linkLabel4.TabIndex = 0;
+            this.linkLabel4.TabStop = true;
+            this.linkLabel4.Text = "Enable to get your URL";
+            this.linkLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ivcheck
+            // 
+            this.ivcheck.AutoSize = true;
+            this.ivcheck.Location = new System.Drawing.Point(13, 708);
+            this.ivcheck.Name = "ivcheck";
+            this.ivcheck.Size = new System.Drawing.Size(45, 13);
+            this.ivcheck.TabIndex = 49;
+            this.ivcheck.Text = "ivcheck";
+            this.ivcheck.Visible = false;
+            // 
+            // NewsLabel
+            // 
+            this.NewsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.NewsLabel.AutoSize = true;
+            this.NewsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewsLabel.ForeColor = System.Drawing.Color.Yellow;
+            this.NewsLabel.Location = new System.Drawing.Point(297, 620);
+            this.NewsLabel.Name = "NewsLabel";
+            this.NewsLabel.Size = new System.Drawing.Size(42, 13);
+            this.NewsLabel.TabIndex = 50;
+            this.NewsLabel.Text = "News!";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(1, 144);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(272, 32);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "QR Code support possibly\r\nin the future!";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -627,44 +760,25 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1261, 639);
+            this.ClientSize = new System.Drawing.Size(1261, 636);
+            this.Controls.Add(this.NewsLabel);
+            this.Controls.Add(this.ivcheck);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.linkLabel3);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.checkBox6);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button10);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.button8);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.checkBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
@@ -677,6 +791,13 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -724,8 +845,17 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.Label ivcheck;
+        private System.Windows.Forms.Label NewsLabel;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button MobileAccess;
+        private System.Windows.Forms.LinkLabel linkLabel4;
+        private System.Windows.Forms.Label label14;
     }
 }
 
