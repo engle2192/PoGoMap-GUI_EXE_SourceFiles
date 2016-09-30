@@ -21,3 +21,5 @@ C:\Users\Chris\Documents\GitHub\PoGoMap-GUI_EXE_SourceFiles\PokemonGo-Map_Launch
 C:\Users\Chris\Documents\GitHub\PoGoMap-GUI_EXE_SourceFiles\PokemonGo-Map_Launcher\PokemonGo-Map_Launcher\obj\Release\PokemonGo_Map_Launcher.Properties.Resources.resources
 C:\Users\Chris\Documents\GitHub\PoGoMap-GUI_EXE_SourceFiles\PokemonGo-Map_Launcher\PokemonGo-Map_Launcher\obj\Release\PokemonGo-Map_Launcher.csproj.GenerateResource.Cache
 C:\Users\Chris\Documents\GitHub\PoGoMap-GUI_EXE_SourceFiles\PokemonGo-Map_Launcher\PokemonGo-Map_Launcher\obj\Release\PokemonGo_Map_Launcher.Form4.resources
+C:\Users\Chris\Documents\GitHub\PoGoMap-GUI_EXE_SourceFiles\PokemonGo-Map_Launcher\PokemonGo-Map_Launcher\bin\Release\QRCoder.dll
+C:\Users\Chris\Documents\GitHub\PoGoMap-GUI_EXE_SourceFiles\PokemonGo-Map_Launcher\PokemonGo-Map_Launcher\bin\Release\UnityEngine.dll

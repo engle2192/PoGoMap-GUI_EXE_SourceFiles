@@ -512,5 +512,17 @@
     <Setting Name="enableTwilio" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="gmapsAPI" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="bot_token" Type="System.String" Scope="User">
+      <Value Profile="(Default)">"YOUR_BOT_TOKEN"</Value>
+    </Setting>
+    <Setting Name="chat_id" Type="System.String" Scope="User">
+      <Value Profile="(Default)">"YOUR_CHAT_ID"</Value>
+    </Setting>
+    <Setting Name="eneable_Telegram" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

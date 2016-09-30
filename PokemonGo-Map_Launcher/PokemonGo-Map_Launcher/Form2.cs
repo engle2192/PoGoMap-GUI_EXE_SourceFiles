@@ -28,6 +28,7 @@ namespace PokemonGo_Map_Launcher
                 tabPage2.Show();
                 tabPage3.Show();
                 tabPage4.Show();
+                tabPage5.Show();
                 tabPage1.Show();
             }
         }
@@ -2068,6 +2069,22 @@ namespace PokemonGo_Map_Launcher
                 lines[35] = @"			""to_number"":" + to_number.Text + "";
                 File.WriteAllLines(@".\PokeAlarm\alarms.json", lines);
             }
+            if (eneable_Telegram.Checked)
+            {
+                var lines = File.ReadAllLines(@".\PokeAlarm\alarms.json");
+                lines[24] = @"			""active"": ""True"",";
+                lines[26] = @"			""bot_token"":" + bot_token.Text + ",";
+                lines[27] = @"			""chat_id"":" + chat_id.Text + "";
+                File.WriteAllLines(@".\PokeAlarm\alarms.json", lines);
+            }
+            else
+            {
+                var lines = File.ReadAllLines(@".\PokeAlarm\alarms.json");
+                lines[24] = @"			""active"": ""False"",";
+                lines[26] = @"			""bot_token"":" + bot_token.Text + ",";
+                lines[27] = @"			""chat_id"":" + chat_id.Text + "";
+                File.WriteAllLines(@".\PokeAlarm\alarms.json", lines);
+            }
 
             MessageBox.Show("Save complete!");
 
@@ -2239,6 +2256,9 @@ namespace PokemonGo_Map_Launcher
             Properties.Settings.Default.from_number = from_number.Text;
             Properties.Settings.Default.to_number = to_number.Text;
             Properties.Settings.Default.enableTwilio = enableTwilo.Checked;
+            Properties.Settings.Default.eneable_Telegram = eneable_Telegram.Checked;
+            Properties.Settings.Default.bot_token = bot_token.Text;
+            Properties.Settings.Default.chat_id = chat_id.Text;
             Properties.Settings.Default.Save();
         }
 

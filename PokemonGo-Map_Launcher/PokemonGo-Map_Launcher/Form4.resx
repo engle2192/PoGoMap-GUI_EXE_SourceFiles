@@ -118,7 +118,27 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="richTextBox1.Text" xml:space="preserve">
-    <value>9/21/16 v3.1.8 - NEW WEBSITE http://go2engle.com (Looking for Mods)
+    <value>9/28/16 v3.2.3
+-Removed Setup button. New installer runs through setup items now
+-Added config pogomap button to main window for troubleshooting
+-Added Google Maps API entry to main screen since Setup window was removed
+
+9/22/16 v3.2.2
+-Added telegram support in notifications options
+-Added a batch script in PreReqs folder to visual see why updater is not working(more for troubleshooting issues.
+-Added a .dll file some people may need for the QR code to generate
+
+9/21/16 v3.2.1
+-Added QR Code for mobile access
+-Added version number in update message
+
+9/21/16 v3.1.9 - Sorry Guys
+- Sorry for the release right after a release realized i messed some stuff up(Got excited about ngrok).
+I promise this is the last time you will need to upate your google maps API key and it will save in
+the setup menu from now on! if your having issues updating delete your config.ini file and under
+bin delete tunnels.txt. The config.ini file is no longer needed. Everything is saved in the GUI that is requierd.
+
+9/21/16 v3.1.8 - NEW WEBSITE http://go2engle.com (Looking for Mods)
 - Another revision to the usernames.ps1 file. Now if you already have a usernames.txt file
 (format like: username:password) or a usernames.csv file(format like: ptc,username,password)
 these will be able to be used by the GUI by placing them in your PokemonGo-Map folder in

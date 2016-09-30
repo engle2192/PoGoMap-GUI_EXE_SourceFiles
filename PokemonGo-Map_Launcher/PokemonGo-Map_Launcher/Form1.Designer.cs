@@ -66,26 +66,32 @@
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MobileAccess = new System.Windows.Forms.Button();
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.ivcheck = new System.Windows.Forms.Label();
             this.NewsLabel = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.GMapsAPI = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.PoGoConfig = new System.Windows.Forms.Button();
+            this.PokeAlarmConfig = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -422,6 +428,7 @@
             this.button7.TabIndex = 33;
             this.button7.Text = "Setup";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Visible = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button10
@@ -567,56 +574,6 @@
             this.toolTip1.SetToolTip(this.linkLabel3, "Click to submit a bug");
             this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::PokemonGo_Map_Launcher.Properties.Settings.Default, "NotificationsPort", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox5.Location = new System.Drawing.Point(208, 129);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(61, 20);
-            this.textBox5.TabIndex = 41;
-            this.textBox5.Text = global::PokemonGo_Map_Launcher.Properties.Settings.Default.NotificationsPort;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::PokemonGo_Map_Launcher.Properties.Settings.Default, "MapPort", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox4.Location = new System.Drawing.Point(58, 129);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(54, 20);
-            this.textBox4.TabIndex = 37;
-            this.textBox4.Text = global::PokemonGo_Map_Launcher.Properties.Settings.Default.MapPort;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::PokemonGo_Map_Launcher.Properties.Settings.Default, "CaptchaKEY", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox3.Location = new System.Drawing.Point(89, 51);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(181, 20);
-            this.textBox3.TabIndex = 28;
-            this.textBox3.Text = global::PokemonGo_Map_Launcher.Properties.Settings.Default.CaptchaKEY;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::PokemonGo_Map_Launcher.Properties.Settings.Default, "StartLOC", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox2.Location = new System.Drawing.Point(179, 103);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(90, 20);
-            this.textBox2.TabIndex = 26;
-            this.textBox2.Text = global::PokemonGo_Map_Launcher.Properties.Settings.Default.StartLOC;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::PokemonGo_Map_Launcher.Properties.Settings.Default, "Password", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.textBox1.Location = new System.Drawing.Point(2, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(194, 20);
-            this.textBox1.TabIndex = 6;
-            this.textBox1.Text = global::PokemonGo_Map_Launcher.Properties.Settings.Default.Password;
-            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -631,6 +588,11 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.tabPage1.Controls.Add(this.PokeAlarmConfig);
+            this.tabPage1.Controls.Add(this.PoGoConfig);
+            this.tabPage1.Controls.Add(this.GMapsAPI);
+            this.tabPage1.Controls.Add(this.label14);
+            this.tabPage1.Controls.Add(this.textBox6);
             this.tabPage1.Controls.Add(this.checkBox7);
             this.tabPage1.Controls.Add(this.checkBox1);
             this.tabPage1.Controls.Add(this.checkBox2);
@@ -670,12 +632,12 @@
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.textBox1);
             this.tabPage2.Controls.Add(this.comboBox1);
-            this.tabPage2.Controls.Add(this.textBox3);
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.button6);
             this.tabPage2.Controls.Add(this.button9);
+            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Controls.Add(this.textBox3);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -686,7 +648,7 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.tabPage3.Controls.Add(this.label14);
+            this.tabPage3.Controls.Add(this.pictureBox1);
             this.tabPage3.Controls.Add(this.MobileAccess);
             this.tabPage3.Controls.Add(this.linkLabel4);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
@@ -695,6 +657,15 @@
             this.tabPage3.Size = new System.Drawing.Size(275, 273);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Mobile Access";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(42, 80);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(227, 187);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // MobileAccess
             // 
@@ -720,6 +691,7 @@
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "Enable to get your URL";
             this.linkLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
             // ivcheck
             // 
@@ -746,13 +718,101 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(1, 144);
+            this.label14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label14.Location = new System.Drawing.Point(6, 161);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(272, 32);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "QR Code support possibly\r\nin the future!";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label14.Size = new System.Drawing.Size(85, 13);
+            this.label14.TabIndex = 45;
+            this.label14.Text = "GMaps API Key:";
+            // 
+            // GMapsAPI
+            // 
+            this.GMapsAPI.Location = new System.Drawing.Point(6, 184);
+            this.GMapsAPI.Name = "GMapsAPI";
+            this.GMapsAPI.Size = new System.Drawing.Size(263, 23);
+            this.GMapsAPI.TabIndex = 46;
+            this.GMapsAPI.Text = "Update API Key";
+            this.GMapsAPI.UseVisualStyleBackColor = true;
+            this.GMapsAPI.Click += new System.EventHandler(this.GMapsAPI_Click);
+            // 
+            // textBox6
+            // 
+            this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::PokemonGo_Map_Launcher.Properties.Settings.Default, "gmapsAPI", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox6.Location = new System.Drawing.Point(94, 158);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(175, 20);
+            this.textBox6.TabIndex = 44;
+            this.textBox6.Text = global::PokemonGo_Map_Launcher.Properties.Settings.Default.gmapsAPI;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::PokemonGo_Map_Launcher.Properties.Settings.Default, "StartLOC", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox2.Location = new System.Drawing.Point(179, 103);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(90, 20);
+            this.textBox2.TabIndex = 26;
+            this.textBox2.Text = global::PokemonGo_Map_Launcher.Properties.Settings.Default.StartLOC;
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::PokemonGo_Map_Launcher.Properties.Settings.Default, "NotificationsPort", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox5.Location = new System.Drawing.Point(208, 129);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(61, 20);
+            this.textBox5.TabIndex = 41;
+            this.textBox5.Text = global::PokemonGo_Map_Launcher.Properties.Settings.Default.NotificationsPort;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::PokemonGo_Map_Launcher.Properties.Settings.Default, "MapPort", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox4.Location = new System.Drawing.Point(58, 129);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(54, 20);
+            this.textBox4.TabIndex = 37;
+            this.textBox4.Text = global::PokemonGo_Map_Launcher.Properties.Settings.Default.MapPort;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::PokemonGo_Map_Launcher.Properties.Settings.Default, "Password", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox1.Location = new System.Drawing.Point(2, 25);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(194, 20);
+            this.textBox1.TabIndex = 6;
+            this.textBox1.Text = global::PokemonGo_Map_Launcher.Properties.Settings.Default.Password;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::PokemonGo_Map_Launcher.Properties.Settings.Default, "CaptchaKEY", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox3.Location = new System.Drawing.Point(89, 51);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(181, 20);
+            this.textBox3.TabIndex = 28;
+            this.textBox3.Text = global::PokemonGo_Map_Launcher.Properties.Settings.Default.CaptchaKEY;
+            // 
+            // PoGoConfig
+            // 
+            this.PoGoConfig.Location = new System.Drawing.Point(163, 244);
+            this.PoGoConfig.Name = "PoGoConfig";
+            this.PoGoConfig.Size = new System.Drawing.Size(105, 23);
+            this.PoGoConfig.TabIndex = 47;
+            this.PoGoConfig.Text = "Config PoGo-Map";
+            this.PoGoConfig.UseVisualStyleBackColor = true;
+            this.PoGoConfig.Click += new System.EventHandler(this.PoGoConfig_Click);
+            // 
+            // PokeAlarmConfig
+            // 
+            this.PokeAlarmConfig.Location = new System.Drawing.Point(163, 215);
+            this.PokeAlarmConfig.Name = "PokeAlarmConfig";
+            this.PokeAlarmConfig.Size = new System.Drawing.Size(105, 23);
+            this.PokeAlarmConfig.TabIndex = 48;
+            this.PokeAlarmConfig.Text = "Config PokeAlarm";
+            this.PokeAlarmConfig.UseVisualStyleBackColor = true;
+            this.PokeAlarmConfig.Click += new System.EventHandler(this.PokeAlarmConfig_Click);
             // 
             // Form1
             // 
@@ -797,7 +857,7 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -855,7 +915,12 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button MobileAccess;
         private System.Windows.Forms.LinkLabel linkLabel4;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button GMapsAPI;
+        private System.Windows.Forms.Button PoGoConfig;
+        private System.Windows.Forms.Button PokeAlarmConfig;
     }
 }
 

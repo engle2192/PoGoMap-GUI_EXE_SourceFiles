@@ -2062,5 +2062,53 @@ namespace PokemonGo_Map_Launcher.Properties {
                 this["enableTwilio"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string gmapsAPI {
+            get {
+                return ((string)(this["gmapsAPI"]));
+            }
+            set {
+                this["gmapsAPI"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("\"YOUR_BOT_TOKEN\"")]
+        public string bot_token {
+            get {
+                return ((string)(this["bot_token"]));
+            }
+            set {
+                this["bot_token"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("\"YOUR_CHAT_ID\"")]
+        public string chat_id {
+            get {
+                return ((string)(this["chat_id"]));
+            }
+            set {
+                this["chat_id"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool eneable_Telegram {
+            get {
+                return ((bool)(this["eneable_Telegram"]));
+            }
+            set {
+                this["eneable_Telegram"] = value;
+            }
+        }
     }
 }

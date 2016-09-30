@@ -14,6 +14,7 @@ using System.Threading;
 using System.Net;
 using System.Net.Sockets;
 using System.Net.NetworkInformation;
+using QRCoder;
 
 
 namespace PokemonGo_Map_Launcher
@@ -25,7 +26,7 @@ namespace PokemonGo_Map_Launcher
             InitializeComponent();
         }
         public string DPath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-        public string currentVersion = "3.1.8";
+        public string currentVersion = "3.2.3";
 
         public static bool CheckForInternetConnection()
         {
@@ -99,7 +100,7 @@ namespace PokemonGo_Map_Launcher
             }
             else
             {
-                DialogResult dialogResult = MessageBox.Show("There is a new update, Would you like to update now?", "Update", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show("There is a new update, Would you like to download version " + readVersion + " and update now?", "Update", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     System.Diagnostics.Process.Start("PoGoMap-GUI_updater.exe");
@@ -168,8 +169,8 @@ namespace PokemonGo_Map_Launcher
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            Process p = Process.Start("cmd.exe", @"/c cd PokemonGo-Map & python runserver.py -ac usernames.csv -l " + textBox2.Text + " -st " + comboBox2.Text + label2.Text + label3.Text + label4.Text + label13.Text + label5.Text + label11.Text + " -H 0.0.0.0 -P " + textBox4.Text + " -wh http://" + GetLocalIPAddress() + ":" + textBox5.Text + ivcheck.Text + "& pause");
+            string GAPI = Properties.Settings.Default.gmapsAPI;
+            Process p = Process.Start("cmd.exe", @"/c cd PokemonGo-Map & python runserver.py -ac usernames.csv -l " + textBox2.Text + " -st " + comboBox2.Text + " -k " + GAPI + label2.Text + label3.Text + label4.Text + label13.Text + label5.Text + label11.Text + " -H 0.0.0.0 -P " + textBox4.Text + " -wh http://" + GetLocalIPAddress() + ":" + textBox5.Text + ivcheck.Text + "& pause");
             Thread.Sleep(150); // Allow the process to open it's window
             SetParent(p.MainWindowHandle, panel2.Handle);
             MoveWindow(p.MainWindowHandle, 0, 0, panel2.Width, panel2.Height, true);
@@ -302,6 +303,12 @@ namespace PokemonGo_Map_Launcher
                 string url = getBetween(text, "http://", ".ngrok.io");
                 linkLabel4.Text = "http://" + url + ".ngrok.io";
 
+                QRCodeGenerator qrGenerator = new QRCodeGenerator();
+                QRCodeData qrCodeData = qrGenerator.CreateQrCode("http://" + url + ".ngrok.io", QRCodeGenerator.ECCLevel.Q);
+                QRCode qrCode = new QRCode(qrCodeData);
+                Bitmap qrCodeImage = qrCode.GetGraphic(5);
+                pictureBox1.Image = qrCodeImage;
+
                 MobileAccess.Text = "Disable Mobile Access";
             }
             else
@@ -314,6 +321,42 @@ namespace PokemonGo_Map_Launcher
                 MobileAccess.Text = "Enable Mobile Access";
             }
         }
+
+        private void GMapsAPI_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.gmapsAPI = textBox6.Text;
+            Properties.Settings.Default.Save();
+            MessageBox.Show("API Key has been updated");
+        }
+
+        private void PoGoConfig_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This may take some time to run.");
+            System.Diagnostics.Process process = new System.Diagnostics.Process();
+            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Normal;
+            startInfo.FileName = "cmd.exe";
+            startInfo.Arguments = @"/C cd PokemonGo-Map & pip install -r requirements.txt & npm install & pause";
+            process.StartInfo = startInfo;
+            process.Start();
+            Thread.Sleep(150);
+            SetParent(process.MainWindowHandle, panel2.Handle);
+            MoveWindow(process.MainWindowHandle, 0, 0, panel2.Width, panel2.Height, true);
+        }
+        private void PokeAlarmConfig_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process process = new System.Diagnostics.Process();
+            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Normal;
+            startInfo.FileName = "cmd.exe";
+            startInfo.Arguments = @"/C cd PokeAlarm & pip install -r requirements.txt";
+            process.StartInfo = startInfo;
+            process.Start();
+            Thread.Sleep(150); // Allow the process to open it's window
+            SetParent(process.MainWindowHandle, panel1.Handle);
+            MoveWindow(process.MainWindowHandle, 0, 0, panel1.Width, panel1.Height, true);
+        }
+
         #endregion
 
         #region CheckBoxes
@@ -419,6 +462,17 @@ namespace PokemonGo_Map_Launcher
             Form4 f4 = new Form4();
             f4.ShowDialog();
         }
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            if (File.Exists(@".\bin\tunnels.txt"))
+            {
+                string text = System.IO.File.ReadAllText(@".\bin\tunnels.txt");
+                string url = getBetween(text, "http://", ".ngrok.io");
+                Clipboard.SetText("http://" + url + ".ngrok.io");
+            }
+            else { }
+        }
         #endregion
 
         #region FormClosing
@@ -439,10 +493,14 @@ namespace PokemonGo_Map_Launcher
                 e.Cancel = true;
             }
         }
+
+
+
+
+
+
+
         #endregion
-
-
-
 
 
     }
